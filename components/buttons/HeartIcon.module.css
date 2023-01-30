@@ -1,0 +1,30 @@
+.fav {
+  color: var(--dark-red);
+  font-size: 35px;
+  stroke: var(--dark-grey);
+  stroke-width: 5px;
+}
+
+.nofav {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 35px;
+  stroke: black;
+  stroke-width: 5px;
+}
+
+.icon-container {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 1;
+}
+
+.fav:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+
+.nofav:hover {
+  cursor: pointer;
+  filter: brightness(2);
+}

@@ -1,0 +1,22 @@
+.button {
+  color: white;
+  border-radius: 6px;
+  border: 1px solid white;
+  background-color: #3ea798;
+  padding: 2px;
+  width: 100%;
+  height: fit-content;
+  align-self: flex-end;
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
+  text-align: center;
+}
+
+.button:hover {
+  border-color: #646cff;
+  color: white;
+}
+
+/* #4270e3 */
+/* .link:hover {
+  opacity: 0.9;
+} */

@@ -1,0 +1,20 @@
+.selector {
+  padding: 0.5rem;
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+  font-weight: 900;
+  border-radius: 10px;
+  color: var(--dark-blue);
+  background-color: var(--off-white);
+  border: none;
+  width: clamp(100px, 100%, 600px);
+  border: 1px solid var(--dark-blue);
+}
+
+.selector:focus {
+  outline: none;
+}
+
+.selector:hover {
+  border-color: #646cff;
+  cursor: pointer;
+}

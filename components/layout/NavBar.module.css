@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  gap: 10px;
+  background-color: #d7e1ec;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.heart {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  color: var(--red);
+  stroke: black;
+}
+
+.plane {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  color: var(--blue);
+  stroke: black;
+}
+
+.button {
+  border: 1px solid var(--grey-blue);
+}
+
+.button:hover {
+  background-color: white;
+  filter: brightness(1.2);
+}

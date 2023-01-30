@@ -1,0 +1,14 @@
+.map-container {
+  width: 100%;
+  border-radius: 30px;
+  min-width: 500px;
+  height: 90vh;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+@media only screen and (max-width: 600px) {
+  .map-container {
+    min-width: 100%;
+    min-height: 400px;
+  }
+}

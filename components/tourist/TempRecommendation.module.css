@@ -1,0 +1,37 @@
+.container {
+  margin: 1rem;
+  display: flex;
+  background: var(--off-white);
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0px 30px 40px -20px var(--grey-blue);
+  min-width: 500px;
+  box-sizing: border-box;
+  border-top: 5px solid var(--blue);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: var(--dark-blue);
+  font-weight: 500;
+}
+
+.plane {
+  font-size: 40px;
+  color: var(--green);
+  stroke: black;
+}
+
+.button {
+  border: 1px solid var(--grey-blue);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    min-width: 90%;
+  }
+}

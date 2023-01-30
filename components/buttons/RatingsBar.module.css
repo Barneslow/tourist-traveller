@@ -1,0 +1,29 @@
+.container {
+  width: 100px;
+  height: 20px;
+  border-radius: 30px;
+  background-color: var(--dark-blue);
+  padding: 2px;
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: flex-end; */
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 75px;
+  background-color: var(--green);
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 50px;
+    height: 10px;
+  }
+
+  .circle {
+    height: 10px;
+    width: 10px;
+  }
+}

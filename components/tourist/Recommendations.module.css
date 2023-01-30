@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inner-container {
+  border-radius: 10px;
+  border: 1px solid rgb(184, 184, 184);
+}
+
+.inner-container:nth-child(1) {
+  border-top: 5px solid var(--green);
+}
+
+.inner-container:nth-child(2) {
+  border-top: 5px solid var(--blue);
+}
+
+.inner-container:nth-child(3) {
+  border-top: 5px solid var(--red);
+}

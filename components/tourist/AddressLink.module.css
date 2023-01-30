@@ -1,0 +1,9 @@
+.address {
+  color: var(--blue);
+  font-weight: 500;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+
+.address:hover {
+  text-decoration: underline;
+}

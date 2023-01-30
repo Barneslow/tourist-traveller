@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  color: darkslategrey;
+  font-size: 24px;
+  height: 100%;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.flag {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  width: 100%;
+  border: 1px solid;
+}
+
+.image-container {
+  width: clamp(125px, 100%, 400px);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
