@@ -48,7 +48,7 @@ const BorderingCountries = ({ borders, setCountryData }) => {
 
   return (
     <div>
-      <span style={{ fontSize: 14 }}>Borders</span>
+      <span className={styles.title}>Borders</span>
       <motion.div
         className={styles.container}
         variants={container}

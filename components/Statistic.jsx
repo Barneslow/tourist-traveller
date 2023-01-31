@@ -3,7 +3,7 @@ import styles from "./Statistics.module.css";
 const Statistic = ({ text, title }) => {
   return (
     <div>
-      <span style={{ fontSize: 14, textAlign: "center" }}>{title}</span>
+      <span className={styles.title}>{title}</span>
       <p className={styles.statistic}>{text}</p>
     </div>
   );

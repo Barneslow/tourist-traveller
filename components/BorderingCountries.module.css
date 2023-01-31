@@ -47,3 +47,7 @@
   transition: opacity 0.3s;
   font-size: clamp(0.8rem, 2.5vw, 1.2rem);
 }
+
+.title {
+  font-size: clamp(10px, 2.5vw, 14px);
+}

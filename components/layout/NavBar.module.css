@@ -2,8 +2,8 @@
   display: flex;
   gap: 10px;
   background-color: #d7e1ec;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  padding: 10px;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+  padding: 5px;
   border-radius: 10px;
   margin: 5px;
 }

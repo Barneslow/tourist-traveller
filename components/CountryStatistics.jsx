@@ -37,37 +37,39 @@ const CountryStatistics = () => {
   const languageArray = Object.values(languages);
 
   return (
-    <div className={styles.container}>
-      <motion.div
-        key={name.common}
-        animate={{ opacity: 1, scale: 1, x: 0, scale: 1 }}
-        initial={{ opacity: 0, x: 25, scale: 0.95 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={styles["image-container"]}
-      >
-        <img className={styles.flag} src={flags?.svg} alt="My SVG Image" />
-      </motion.div>
-      <motion.div
-        className={styles["list-container"]}
-        variants={container}
-        initial="hidden"
-        animate="show"
-        key={population}
-      >
-        <motion.div variants={child}>
-          <Statistic text={name?.common} title="Country" />
+    <div className={styles.wrapper}>
+      <div className={styles.container}>
+        <motion.div
+          key={name.common}
+          animate={{ opacity: 1, scale: 1, x: 0, scale: 1 }}
+          initial={{ opacity: 0, x: 25, scale: 0.95 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className={styles["image-container"]}
+        >
+          <img className={styles.flag} src={flags?.svg} alt="My SVG Image" />
         </motion.div>
-        <motion.div variants={child}>
-          <Statistic title="Population" text={numberWithCommas(population)} />
+        <motion.div
+          className={styles["list-container"]}
+          variants={container}
+          initial="hidden"
+          animate="show"
+          key={population}
+        >
+          <motion.div variants={child}>
+            <Statistic text={name?.common} title="Country" />
+          </motion.div>
+          <motion.div variants={child}>
+            <Statistic title="Population" text={numberWithCommas(population)} />
+          </motion.div>
+          <motion.div variants={child}>
+            <Statistic title="Region" text={region} />
+          </motion.div>
+          <motion.div variants={child}>
+            <Languages languages={languageArray} />
+          </motion.div>
         </motion.div>
-        <motion.div variants={child}>
-          <Statistic title="Region" text={region} />
-        </motion.div>
-        <motion.div variants={child}>
-          <Languages languages={languageArray} />
-        </motion.div>
-        <BorderingCountries borders={borders} />
-      </motion.div>
+      </div>
+      <BorderingCountries borders={borders} />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import styles from "./Statistics.module.css";
 const Languages = ({ languages }) => {
   return (
     <ul className={styles.flatlist}>
-      <span style={{ fontSize: 14 }}>Languages</span>
+      <span className={styles.title}>Languages</span>
       {languages?.map((lng, i) => (
         <li key={i} className={styles.list}>
           {lng}
