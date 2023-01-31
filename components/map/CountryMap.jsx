@@ -7,7 +7,22 @@ import { FavouriteContext } from "../../context/favouriteContext";
 import FunctionalMarker from "../tourist/FunctionalMarker";
 
 const CountryMap = ({ zoom, setMapRef }) => {
+  const { countryData } = useContext(CountryContext);
   const favouriteCtx = useContext(FavouriteContext);
+  const coords = countryData?.latlng;
+
+  function CountryMarker() {
+    if (Object.keys(countryData).length === 0) return;
+
+    return (
+      <Marker position={coords}>
+        <Popup>
+          {countryData?.name}
+          <br />
+        </Popup>
+      </Marker>
+    );
+  }
 
   function Markers() {
     const map = useMap();
@@ -39,10 +54,11 @@ const CountryMap = ({ zoom, setMapRef }) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <CountryMarker />
         <Markers />
       </MapContainer>
     ),
-    [favouriteCtx.markers]
+    [favouriteCtx.markers, coords]
   );
 
   return <div>{displayMap}</div>;

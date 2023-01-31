@@ -14,7 +14,7 @@ function App() {
       <CountryContextProvider>
         <FavouriteContextProvider>
           <div className={styles.app}>
-            <CountryMap zoom={7} setMapRef={setMapRef} />
+            <CountryMap zoom={7} setMapRef={setMapRef} mapRef={mapRef} />
             <Layout mapRef={mapRef} />
           </div>
         </FavouriteContextProvider>
