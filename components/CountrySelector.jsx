@@ -17,7 +17,7 @@ const CountrySelector = ({ setCountryData, mapRef }) => {
 
     const location = data[0].latlng;
 
-    mapRef.flyTo(location, 7);
+    mapRef.flyTo(location, 5);
   }
 
   return (

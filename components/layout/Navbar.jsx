@@ -52,18 +52,21 @@ const NavBar = ({ mapRef, setView }) => {
           icon={faFlag}
           className={styles.flag}
           buttonClass={styles.button}
+          text="Country"
         />
         <IconButton
           onClick={fetchGoogleAPIHandler}
           icon={faEarth}
           className={styles.globe}
           buttonClass={styles.button}
+          text="Places"
         />
         <IconButton
           onClick={setFavouritesRecommendation}
           icon={faHeart}
           className={styles.heart}
           buttonClass={styles.button}
+          text="Favourites"
         />
       </div>
     </div>

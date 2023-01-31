@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo, useState } from "react";
+import { useContext, useMemo } from "react";
 import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 import { CountryContext } from "../../context/countryContext";
 
