@@ -8,7 +8,7 @@
 }
 
 .flag {
-  width: 100px;
+  width: clamp(50px, 22.5vw, 100px);
   border-radius: 10px;
 }
 
