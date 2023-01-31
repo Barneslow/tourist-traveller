@@ -6,7 +6,7 @@ import { FavouriteContext } from "../../context/favouriteContext";
 
 import styles from "./HeartIcon.module.css";
 
-const HeartIcon = ({ recommendation }) => {
+const HeartIcon = ({ recommendation, mapRef }) => {
   const favouriteCtx = useContext(FavouriteContext);
 
   const isFavourite = favouriteCtx.favourites.find(
@@ -14,6 +14,9 @@ const HeartIcon = ({ recommendation }) => {
   );
 
   function addFavourite() {
+    const location = recommendation?.geometry?.location;
+    mapRef.flyTo(location, 13);
+
     isFavourite
       ? favouriteCtx.removeFavouriteHandler(recommendation.name)
       : favouriteCtx.favouritesHandler(recommendation.name);

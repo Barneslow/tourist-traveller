@@ -27,13 +27,9 @@ const PlacesContextProvider = ({ children }) => {
     setRecommendedPlaces((prev) => places);
   }
 
-  function updatedRecommendationHandler() {
-    setUpdatedRecommendations((prevState) => {
-      return !prevState;
-    });
+  function updatedRecommendationHandler(boolean) {
+    setUpdatedRecommendations(boolean);
   }
-
-  console.log(updatedRecommendation);
 
   const value = {
     recommendedPlaces,

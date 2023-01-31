@@ -7,7 +7,7 @@ import { PlacesContext } from "../../context/placesContext";
 import styles from "./Recommendations.module.css";
 import TempRecommendation from "./TempRecommendation";
 
-const Recommendations = () => {
+const Recommendations = ({ mapRef }) => {
   const placesCtx = useContext(PlacesContext);
 
   const { recommendedPlaces, updatedRecommendation } = placesCtx;
@@ -26,8 +26,6 @@ const Recommendations = () => {
     hidden: { opacity: 0, x: 100 },
     show: { opacity: 1, x: 0 },
   };
-
-  console.log(updatedRecommendation);
 
   return (
     <div
@@ -52,7 +50,7 @@ const Recommendations = () => {
                 variants={child}
                 key={i}
               >
-                <TouristAttraction recommendation={place} />
+                <TouristAttraction recommendation={place} mapRef={mapRef} />
               </motion.div>
             ))}
           </>

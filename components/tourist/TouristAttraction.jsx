@@ -5,7 +5,7 @@ import RatingsBar from "../buttons/RatingsBar";
 import AddressLink from "./AddressLink";
 import styles from "./TouristAttraction.module.css";
 
-const TouristAttraction = ({ recommendation }) => {
+const TouristAttraction = ({ recommendation, mapRef }) => {
   const APIKEY = import.meta.env.VITE_GOOGLE_PLACES_API_KEY;
 
   const {
@@ -28,7 +28,7 @@ const TouristAttraction = ({ recommendation }) => {
           // &photoreference=${photoRef}&key=${APIKEY}`}
           src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80"
         />
-        <HeartIcon recommendation={recommendation} />
+        <HeartIcon recommendation={recommendation} mapRef={mapRef} />
       </div>
 
       <div className={styles["info-container"]}>
@@ -47,6 +47,7 @@ const TouristAttraction = ({ recommendation }) => {
           formatted_address={formatted_address}
           location={location}
           name={name}
+          mapRef={mapRef}
         />
 
         <div className={styles["button-container"]}>

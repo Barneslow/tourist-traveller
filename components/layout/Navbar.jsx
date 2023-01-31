@@ -9,7 +9,7 @@ import { faHeart, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./NavBar.module.css";
 
-const NavBar = () => {
+const NavBar = ({ mapRef }) => {
   const countryCtx = useContext(CountryContext);
   const favouriteCtx = useContext(FavouriteContext);
   const placesCtx = useContext(PlacesContext);
@@ -22,18 +22,18 @@ const NavBar = () => {
       },
     });
 
-    placesCtx.updatedRecommendationHandler();
+    placesCtx.updatedRecommendationHandler(!placesCtx.updatedRecommendation);
 
     placesCtx.setRecommendedPlacesHandler(data);
   }
 
   function setFavouritesRecommendation() {
-    placesCtx.updatedRecommendationHandler();
+    placesCtx.updatedRecommendationHandler(!placesCtx.updatedRecommendation);
     placesCtx.setRecommendedPlacesHandler(favouriteCtx.markers);
   }
   return (
     <div className={styles.nav}>
-      <CountrySelector />
+      <CountrySelector mapRef={mapRef} />
       <div
         style={{
           display: "flex",

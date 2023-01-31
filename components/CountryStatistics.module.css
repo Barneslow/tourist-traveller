@@ -1,11 +1,13 @@
 .container {
   display: flex;
+  flex-direction: column;
   color: darkslategrey;
   font-size: 24px;
   height: 100%;
   padding: 1rem;
   gap: 1rem;
   justify-content: center;
+  align-items: center;
 }
 
 .list-container {

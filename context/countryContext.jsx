@@ -1,5 +1,5 @@
 import axios from "axios";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export const CountryContext = createContext({
   map: {},
@@ -13,6 +13,7 @@ export const CountryContext = createContext({
 const CountryContextProvider = ({ children }) => {
   const [countryData, setCountryData] = useState({});
   const [selectedCountry, setSelectedCountry] = useState("Ireland");
+  const [map, setMap] = useState();
 
   useEffect(() => {
     async function fetchInitialCountry() {
@@ -24,6 +25,11 @@ const CountryContextProvider = ({ children }) => {
 
     fetchInitialCountry();
   }, []);
+
+  function setMapHandler(map) {
+    console.log(map);
+    setMap(map);
+  }
 
   function setCountryDataHandler(data) {
     setCountryData(data);
@@ -38,6 +44,8 @@ const CountryContextProvider = ({ children }) => {
     setCountryDataHandler,
     setSelectedCountryHandler,
     selectedCountry,
+    map,
+    setMapHandler,
   };
   return (
     <CountryContext.Provider value={value}>{children}</CountryContext.Provider>

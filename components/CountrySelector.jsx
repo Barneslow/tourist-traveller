@@ -5,7 +5,7 @@ import { CountryContext } from "../context/countryContext";
 
 import styles from "./CountrySelector.module.css";
 
-const CountrySelector = ({ setCountryData }) => {
+const CountrySelector = ({ setCountryData, mapRef }) => {
   const countryCtx = useContext(CountryContext);
 
   async function fetchCountryData(name) {
@@ -14,6 +14,10 @@ const CountrySelector = ({ setCountryData }) => {
 
     countryCtx.setCountryDataHandler(...data);
     countryCtx.setSelectedCountryHandler(name);
+
+    const location = data[0].latlng;
+
+    mapRef.flyTo(location, 7);
   }
 
   return (
