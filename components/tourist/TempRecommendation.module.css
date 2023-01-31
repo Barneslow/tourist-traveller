@@ -20,6 +20,12 @@
   font-weight: 500;
 }
 
+.header {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
 .plane {
   font-size: 40px;
   color: var(--green);

@@ -7,7 +7,6 @@ import { faPlane } from "@fortawesome/free-solid-svg-icons";
 import styles from "./TempRecommendation.module.css";
 import { CountryContext } from "../../context/countryContext";
 import axios from "axios";
-import { baseURL } from "../../config/baseURL";
 
 const TempRecommendation = () => {
   const placesCtx = useContext(PlacesContext);
@@ -36,12 +35,7 @@ const TempRecommendation = () => {
       transition={{ delay: 1, type: "spring", bounce: 0.6, duration: 1 }}
       className={styles.container}
     >
-      <h2
-        style={{ fontSize: 28, color: "var(--dark-grey)", fontWeight: 900 }}
-        className={styles.title}
-      >
-        No Destinations Saved
-      </h2>
+      <h2 className={styles.header}>No Destinations Saved</h2>
       <h3 className={styles.title}>Start searching for destinations!</h3>
       <IconButton
         onClick={fetchGoogleAPIHandler}

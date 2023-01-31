@@ -5,11 +5,11 @@ import { FavouriteContext } from "../../context/favouriteContext";
 import { PlacesContext } from "../../context/placesContext";
 import IconButton from "../buttons/IconButton";
 import CountrySelector from "../CountrySelector";
-import { faHeart, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faFlag, faEarth } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./NavBar.module.css";
 
-const NavBar = ({ mapRef }) => {
+const NavBar = ({ mapRef, setView }) => {
   const countryCtx = useContext(CountryContext);
   const favouriteCtx = useContext(FavouriteContext);
   const placesCtx = useContext(PlacesContext);
@@ -28,11 +28,13 @@ const NavBar = ({ mapRef }) => {
     placesCtx.updatedRecommendationHandler(!placesCtx.updatedRecommendation);
 
     placesCtx.setRecommendedPlacesHandler(data);
+    setView(false);
   }
 
   function setFavouritesRecommendation() {
     placesCtx.updatedRecommendationHandler(!placesCtx.updatedRecommendation);
     placesCtx.setRecommendedPlacesHandler(favouriteCtx.markers);
+    setView(false);
   }
   return (
     <div className={styles.nav}>
@@ -46,9 +48,15 @@ const NavBar = ({ mapRef }) => {
         }}
       >
         <IconButton
+          onClick={() => setView(true)}
+          icon={faFlag}
+          className={styles.flag}
+          buttonClass={styles.button}
+        />
+        <IconButton
           onClick={fetchGoogleAPIHandler}
-          icon={faGlobe}
-          className={styles.plane}
+          icon={faEarth}
+          className={styles.globe}
           buttonClass={styles.button}
         />
         <IconButton

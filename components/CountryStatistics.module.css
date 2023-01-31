@@ -9,7 +9,6 @@
   font-size: 24px;
   height: 100%;
   gap: 1rem;
-  justify-content: center;
   align-items: center;
 }
 
@@ -30,11 +29,4 @@
 
 .image-container {
   width: clamp(125px, 100%, 400px);
-}
-
-@media only screen and (max-width: 600px) {
-  .container {
-    flex-direction: row;
-    align-items: flex-start;
-  }
 }

@@ -4,6 +4,8 @@
   font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
-.address:hover {
+.address:hover,
+.address:active {
   cursor: pointer;
+  text-decoration: underline;
 }

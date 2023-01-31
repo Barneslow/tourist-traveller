@@ -17,7 +17,7 @@ const CountryMap = ({ zoom, setMapRef }) => {
     return (
       <Marker position={coords}>
         <Popup>
-          {countryData?.name}
+          {countryData?.name?.common}
           <br />
         </Popup>
       </Marker>
