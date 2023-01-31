@@ -9,6 +9,6 @@
 @media only screen and (max-width: 600px) {
   .map-container {
     min-width: 100%;
-    min-height: 400px;
+    height: 50vh;
   }
 }
