@@ -15,12 +15,15 @@ const NavBar = ({ mapRef }) => {
   const placesCtx = useContext(PlacesContext);
 
   async function fetchGoogleAPIHandler() {
-    const { data } = await axios(`tourist-traveller-server-production.up.railway.app`, {
-      method: "POST",
-      data: {
-        query: countryCtx.selectedCountry,
-      },
-    });
+    const { data } = await axios(
+      `https://tourist-traveller-server-production.up.railway.app/`,
+      {
+        method: "POST",
+        data: {
+          query: countryCtx.selectedCountry,
+        },
+      }
+    );
 
     placesCtx.updatedRecommendationHandler(!placesCtx.updatedRecommendation);
 

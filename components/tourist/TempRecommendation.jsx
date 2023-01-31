@@ -7,6 +7,7 @@ import { faPlane } from "@fortawesome/free-solid-svg-icons";
 import styles from "./TempRecommendation.module.css";
 import { CountryContext } from "../../context/countryContext";
 import axios from "axios";
+import { baseURL } from "../../config/baseURL";
 
 const TempRecommendation = () => {
   const placesCtx = useContext(PlacesContext);
@@ -14,7 +15,7 @@ const TempRecommendation = () => {
 
   async function fetchGoogleAPIHandler() {
     const { data } = await axios(
-      `tourist-traveller-server-production.up.railway.app`,
+      `https://tourist-traveller-server-production.up.railway.app/`,
       {
         method: "POST",
         data: {
