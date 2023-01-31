@@ -3,7 +3,7 @@ import styles from "./AddressLink.module.css";
 
 const AddressLink = ({ formatted_address, location, name, mapRef }) => {
   const moveToLocationHandler = useCallback(() => {
-    mapRef.flyTo(location, 7);
+    mapRef.flyTo(location, 13);
   }, [mapRef]);
 
   return (
