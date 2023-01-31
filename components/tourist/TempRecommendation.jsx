@@ -13,12 +13,15 @@ const TempRecommendation = () => {
   const countryCtx = useContext(CountryContext);
 
   async function fetchGoogleAPIHandler() {
-    const { data } = await axios(`http://localhost:3000/`, {
-      method: "POST",
-      data: {
-        query: countryCtx.selectedCountry,
-      },
-    });
+    const { data } = await axios(
+      `tourist-traveller-server-production.up.railway.app`,
+      {
+        method: "POST",
+        data: {
+          query: countryCtx.selectedCountry,
+        },
+      }
+    );
 
     placesCtx.updatedRecommendationHandler();
 

@@ -24,9 +24,9 @@ const TouristAttraction = ({ recommendation, mapRef }) => {
       <div className={styles["image-container"]}>
         <img
           className={styles.image}
-          // src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400
-          // &photoreference=${photoRef}&key=${APIKEY}`}
-          src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80"
+          src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400
+          &photoreference=${photoRef}&key=${APIKEY}`}
+          // src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80"
         />
         <HeartIcon recommendation={recommendation} mapRef={mapRef} />
       </div>
