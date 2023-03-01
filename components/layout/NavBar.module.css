@@ -28,6 +28,9 @@
 
 .button {
   border: 1px solid var(--grey-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .button:hover {

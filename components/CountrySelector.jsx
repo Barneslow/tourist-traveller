@@ -5,7 +5,7 @@ import { CountryContext } from "../context/countryContext";
 
 import styles from "./CountrySelector.module.css";
 
-const CountrySelector = ({ setCountryData, mapRef }) => {
+const CountrySelector = ({ mapRef }) => {
   const countryCtx = useContext(CountryContext);
 
   async function fetchCountryData(name) {

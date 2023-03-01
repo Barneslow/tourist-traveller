@@ -18,7 +18,6 @@ const FavouriteContextProvider = ({ children }) => {
   }
 
   function setMarkerHandler(location) {
-    console.log(location);
     setMarkers((prev) => [...prev, location]);
   }
 

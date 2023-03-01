@@ -1,17 +1,5 @@
 import { createContext, useState } from "react";
 
-// const initalRecommended = [
-//   {
-//     business_status: "OPERATIONAL",
-//     formatted_address: "Saint James' (part of Phoenix Park), Dublin 8, Ireland",
-//     geometry: { location: { lat: 53.3561935, lng: -6.305289800000001 } },
-//     rating: 4.6,
-//     user_ratings_total: 23162,
-//     photos: [],
-//     name: "EPIC The Irish Emigration Museum",
-//   },
-// ];
-
 export const PlacesContext = createContext({
   recommendedPlaces: [],
   updatedRecommendation: false,
